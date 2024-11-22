@@ -1,0 +1,265 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0; padding: 0;
+    text-decoration: none;
+}
+
+header {
+    background-color: black;
+    position: absolute;
+    top: 0; left: 0;right: 0;
+    box-shadow: 0 4px 20px rgba(8, 160, 255, 0.685);
+    border-radius: 15px;
+    margin-bottom: 40%;
+
+}
+header .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .flex nav a {
+     font-size: 18px;
+     color:white;
+     margin-left: 15px;
+}
+
+header .flex nav a:hover { 
+    color: rgb(108, 107, 107);
+}
+
+#menu-btn{
+    font-size: 3rem;
+    color: black;
+    display: none;
+}
+
+#close-btn{
+    position: absolute;
+    top: 18px; right: 18px;
+    color:black;
+    font-size: 40px;
+    display: none;
+}
+
+@media (max-width:991px){
+
+}
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    #close-btn{
+        display: inline-block;
+    }
+
+    header .flex nav {
+        position: fixed;
+        top:0;bottom:0;right:0;
+        width: 35%;
+        background-color: rgb(77, 77, 77);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        gap: 30px;
+        transition: .2s linear;
+   }
+   header .flex nav .active {
+    right: 0;;
+   }
+   header .flex nav a {
+        font-size: 20px;
+        color:white;
+        
+    }
+    header .flex nav a:hover {
+        color:rgb(155, 155, 155);
+    }
+
+   
+}
+@media (max-width:440px){
+    
+}
+
+/* ---------------------------------*/
+
+
+.home {
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.home .flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+.home .flex .image {
+    margin-top: 100px;
+}
+
+.home .flex .image img {
+    width: 100%;
+}
+.home .flex .content {
+    margin-top: 100px;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   justify-content: space-around;
+   gap: 20px;
+
+}
+
+.home .flex .content  h1{
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+    font-family: "Playfair Display", serif;
+    position: relative;
+    left: 68px;
+}
+
+.home .flex .content pre {
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.home .flex .content .btn {
+    color: white;
+    position: relative;
+    left: 68px;
+    background-color: rgb(0, 191, 255);
+    border: 0px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 1s linear;
+    z-index: 0;
+}
+
+.home .flex .content .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    height: 100%;
+    width: 0%;
+    border-radius: 5rem;
+    background-color: black;
+    transition: 1s ease-out;
+    z-index: -1;
+}
+
+.home .flex .content .btn:hover {
+    color: white;
+}
+
+
+.home .flex .content .btn:hover::before {
+    left: 0%;
+    width: 100%;
+}
+
+/* ------------------------------------------- */
+
+
+.black::after {
+    content: '';
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    box-shadow:  0 4px 80px rgba(8, 201, 255, 0.685) ;
+    position: absolute;
+    z-index: -1000000000000000000;
+    width: 100%;
+    background-color: #0f0f10;
+    height: 85%;
+}
+
+.black .content h1 {
+    font-size: 35px;
+    text-align: center;
+    text-shadow:  0 4px 30px rgba(8, 201, 255, 0.685) ;
+    margin-top: 50px;
+}
+
+.align {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.cont {  
+    width: 40%;
+    margin-top: 150px;
+}
+
+.cont p {
+    text-align: center;
+    color: white;
+}
+
+
+
+.features {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 25px;
+    text-align: center;
+    margin: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card .icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.feature-card h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.feature-card p {
+    font-size: 10px;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
